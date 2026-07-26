@@ -1,6 +1,7 @@
 {
   "name": "second-pair-discount",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "shopify app dev",
     "build": "remix vite:build",
