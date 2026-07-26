@@ -6,7 +6,7 @@ WORKDIR /app
 RUN apk add --no-cache openssl
 
 COPY package.json package-lock.json* ./
-RUN npm ci --omit=dev || npm install --omit=dev
+RUN npm ci || npm install
 
 COPY prisma ./prisma
 RUN npx prisma generate
