@@ -1,10 +1,10 @@
 import {
-  DeliveryInput,
+  Input,
   CartDeliveryOptionsDiscountsGenerateRunResult,
 } from "../generated/api";
 
 export function cartDeliveryOptionsDiscountsGenerateRun(
-  input: DeliveryInput,
+  input: Input,
 ): CartDeliveryOptionsDiscountsGenerateRunResult {
   return { operations: [] };
 }
