@@ -1,0 +1,26 @@
+api_version = "2026-04"
+
+[[extensions]]
+name = "t:name"
+handle = "cus-discounts"
+type = "function"
+uid = "9751ccca-4b34-ad64-3009-f11ff29b244372740fa1"
+description = "t:description"
+
+  [[extensions.targeting]]
+  target = "cart.lines.discounts.generate.run"
+  input_query = "src/cart_lines_discounts_generate_run.graphql"
+  export = "cart-lines-discounts-generate-run"
+
+  [[extensions.targeting]]
+  target = "cart.delivery-options.discounts.generate.run"
+  input_query = "src/cart_delivery_options_discounts_generate_run.graphql"
+  export = "cart-delivery-options-discounts-generate-run"
+
+  [[extensions.metafields]]
+  namespace = "$app:cus-discounts"
+  key = "config"
+
+  [extensions.build]
+  command = ""
+  path = "dist/function.wasm"

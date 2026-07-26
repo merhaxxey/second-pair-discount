@@ -1,0 +1,37 @@
+query CartLinesDiscountsGenerateRunInput {
+  discount {
+    discountClasses
+    metafield(namespace: "$app:cus-discounts", key: "config") {
+      value
+    }
+  }
+  cart {
+    lines {
+      id
+      quantity
+      cost {
+        amountPerQuantity {
+          amount
+        }
+      }
+      merchandise {
+        ... on ProductVariant {
+          id
+          product {
+            id
+            hasTags(tags: ["pair-discount-eligible"]) {
+              tag
+              hasTag
+            }
+          }
+        }
+      }
+      attribute(key: "_frame_token") {
+        value
+      }
+      frameRef: attribute(key: "_frame_ref") {
+        value
+      }
+    }
+  }
+}

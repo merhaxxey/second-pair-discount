@@ -1,0 +1,16 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "26c2be8868d623f3bd5487566efaafbf"
+name = "custom discount app"
+application_url = "https://REPLACE_WITH_YOUR_RENDER_URL.onrender.com"
+embedded = true
+
+[webhooks]
+api_version = "2026-10"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_discounts,read_products,write_discounts"
+
+[auth]
+redirect_urls = [ "https://REPLACE_WITH_YOUR_RENDER_URL.onrender.com/auth/callback" ]

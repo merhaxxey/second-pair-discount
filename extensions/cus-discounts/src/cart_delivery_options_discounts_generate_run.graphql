@@ -1,0 +1,10 @@
+query CartDeliveryOptionsDiscountsGenerateRunInput {
+  discount {
+    discountClasses
+  }
+  cart {
+    deliveryGroups {
+      id
+    }
+  }
+}
